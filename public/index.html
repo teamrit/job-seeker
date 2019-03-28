@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!--
+      <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet" />
+    -->
+    <title>BMO Job Seeker</title>
+  </head>
+
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root"></div>
+    <script type="text/javascript" data-cfasync="false">
+      window.purechatApi = {
+        l: [],
+        t: [],
+        on: function() {
+          this.l.push(arguments);
+        }
+      };
+      (function() {
+        var done = false;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = "https://app.purechat.com/VisitorWidget/WidgetScript";
+        document
+          .getElementsByTagName("HEAD")
+          .item(0)
+          .appendChild(script);
+        script.onreadystatechange = script.onload = function(e) {
+          if (
+            !done &&
+            (!this.readyState ||
+              this.readyState == "loaded" ||
+              this.readyState == "complete")
+          ) {
+            var w = new PCWidget({
+              c: "0977e540-b70d-4df5-83a1-a323b92280f3",
+              f: true
+            });
+            done = true;
+          }
+        };
+      })();
+    </script>
+  </body>
+</html>
